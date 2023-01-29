@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>사업자 진위 조회 및 목록</title>
+</head>
+<body>
+
+<div class="container">
+    <div>
+        <h1>사업자 진위 조회 및 목록</h1>
+        <h4 th:text="|${user_id}님 환영합니다.|">로그인 사용자 이름</h4>
+
+        <p>사업자 등록번호를 입력하면 사업자 등록 진위여부를 파악하여 알려줍니다. <br>
+            휴업, 폐업한 사용자의 경우 '존재하지 않는 사업자 목록'에 등록되고,<br>
+            아직 현존하는 사업자의 경우 '존재하는 사업자 목록'에 등록됩니다.<br>
+            (유료회원의 경우에만 목록을 확인하는 것이 가능한 서비스이나 지금은 알파버전으로 <br>
+            모든 회원이 로그인만 가능하다면 목록 확인이 가능합니다.)<br>
+            여러 유저들과 함께 목록을 완성시켜가봅시다.</p>
+        <p>
+            <a href="/afterLogin/search">조회</a>
+            <a href="/afterLogin/presentList">존재하는 사업자 목록</a>
+            <a href="/afterLogin/closedList">존재하지 않는 사업자 목록</a>
+            <br>
+            <a href="/">로그아웃</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>
